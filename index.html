@@ -29,18 +29,19 @@
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
         }
 
         nav {
             margin-top: 1rem;
+            text-align: center;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 1rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         nav a:hover {
@@ -51,16 +52,21 @@
             max-width: 1100px;
             margin: 2rem auto;
             padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.9); /* 투명도 추가 */
+            background: rgba(255, 255, 255, 0.8);
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 1rem 0;
+            margin: 1rem;
             padding: 1.5rem;
             transition: transform 0.2s ease-in-out;
+            flex: 1 1 calc(33.333% - 2rem); /* 반응형 카드 크기 */
+            min-width: 300px;
         }
 
         .card:hover {
@@ -73,7 +79,7 @@
         }
 
         footer {
-            background: rgba(51, 51, 51, 0.8); /* 투명도 추가 */
+            background: rgba(51, 51, 51, 0.8);
             color: #fff;
             text-align: center;
             padding: 1rem 0;
@@ -82,6 +88,48 @@
 
         footer p {
             margin: 0;
+        }
+
+        /* 📌 반응형 디자인 */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                flex: 1 1 90%;
+                min-width: 280px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 0.5rem;
+            }
+
+            .card {
+                flex: 1 1 100%;
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -103,7 +151,7 @@
         </section>
 
         <section id="contact" class="card">
-            <h2> 서버로가기 </h2>
+            <h2>서버로 가기</h2>
             <p>서버에 들어오시려면 아래 서버로 떠나기 눌러주세요!</p>
             <p><a href="https://disboard.org/ko/server/1322582802683793449">서버로 떠나기</a></p>
         </section>
@@ -114,4 +162,3 @@
     </footer>
 </body>
 </html>
-
