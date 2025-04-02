@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://tteokbokki.o-r.kr/sitemap.xml
