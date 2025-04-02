@@ -23,8 +23,8 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: url('background.jpg') no-repeat center center fixed;  /* 배경을 고정 */
+            background-size: cover;  /* 배경 이미지 크기 고정 */
             min-height: 100vh; /* 페이지 높이를 100vh로 설정하여 화면 전체를 채움 */
             display: flex;
             flex-direction: column;
@@ -80,7 +80,7 @@
             text-align: center;
             padding: 1rem 0;
             width: 100%;
-            position: sticky;  /* sticky로 변경하여 스크롤 시 고정되도록 처리 */
+            position: relative;  /* 고정하지 않고 스크롤에 따라 아래로 밀리도록 처리 */
             bottom: 0;
             margin-top: auto; /* footer가 페이지 하단으로 자동으로 밀리도록 설정 */
         }
@@ -156,7 +156,7 @@
         <section id="contact" class="card">
             <h2>서버로 가기</h2>
             <p>서버에 들어오시려면<br>아래 서버로 떠나기를 눌러주세요!</p>
-            <p><a href="https://disboard.org/ko/server/1322582802683793449">서버로 떠나기</a></p>
+            <p><a href="https://disboard.org/ko/server/1322582802683793449">매콤쫀득떡볶이 서버로 떠나기</a></p>
         </section>
     </div>
 
