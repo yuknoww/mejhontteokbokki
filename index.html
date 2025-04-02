@@ -25,7 +25,9 @@
             color: #333;
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
-            min-height: 100vh;
+            min-height: 100vh; /* 페이지 높이를 100vh로 설정하여 화면 전체를 채움 */
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -46,6 +48,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            flex-grow: 1; /* 내용이 길어지면 footer가 아래로 밀리게 함 */
         }
 
         .card {
@@ -77,8 +80,9 @@
             text-align: center;
             padding: 1rem 0;
             width: 100%;
-            position: fixed;  /* 고정 */
-            bottom: 0;        /* 하단에 위치 */
+            position: sticky;  /* sticky로 변경하여 스크롤 시 고정되도록 처리 */
+            bottom: 0;
+            margin-top: auto; /* footer가 페이지 하단으로 자동으로 밀리도록 설정 */
         }
 
         footer p {
